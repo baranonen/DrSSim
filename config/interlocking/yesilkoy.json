@@ -1,0 +1,255 @@
+{
+  "version": 1,
+  "graphId": "yesilkoy",
+  "approachAnnouncementCircuits": [
+    "2-0",
+    "1-3"
+  ],
+  "powerSupply": {
+    "backupSupportsPoints": false,
+    "backupFeedsRectifiers": true
+  },
+  "taktPeriodMs": 800,
+  "pointMovementMs": 4000,
+  "pointMotorTimeoutMs": 6000,
+  "routeHoldMs": 100,
+  "routeOperationMs": 500,
+  "controlHoldMs": 100,
+  "controlOperationMs": 500,
+  "continuousHoldMs": 100,
+  "continuousOperationMs": 300,
+  "substituteHoldMs": 100,
+  "dayNightHoldMs": 100,
+  "initialPointBranch": "B",
+  "pointTrackCircuits": {
+    "1": "W1",
+    "2": "W2",
+    "7": "W7",
+    "6": "W6",
+    "10": "W10",
+    "13": "W13",
+    "3": "W3",
+    "12": "W12",
+    "11": "W11",
+    "8": "W8",
+    "5": "W5",
+    "Gs I": "W4"
+  },
+  "shuntConditions": {
+    "26.4": {
+      "points": {
+        "5": "C"
+      }
+    },
+    "27.3": {
+      "points": {
+        "6": "C"
+      }
+    },
+    "27.1": {
+      "points": {
+        "6": "B"
+      }
+    }
+  },
+  "routes": [
+    {
+      "id": "28/2",
+      "startSignalId": "28",
+      "target": {
+        "kind": "route-target",
+        "targetId": "2"
+      },
+      "points": {
+        "12": "B",
+        "10": "B",
+        "11": "B",
+        "13": "B",
+        "8": "B"
+      },
+      "trackCircuits": [
+        "W12",
+        "W11",
+        "W8",
+        "1-2"
+      ],
+      "stopSignals": [],
+      "kind": "entry"
+    },
+    {
+      "id": "28/4",
+      "startSignalId": "28",
+      "target": {
+        "kind": "route-target",
+        "targetId": "4"
+      },
+      "points": {
+        "12": "B",
+        "10": "B",
+        "11": "B",
+        "13": "B",
+        "8": "C"
+      },
+      "trackCircuits": [
+        "W12",
+        "W11",
+        "W8",
+        "4"
+      ],
+      "stopSignals": [],
+      "kind": "entry"
+    },
+    {
+      "id": "26.2/Bakırköy",
+      "startSignalId": "26.2",
+      "target": {
+        "kind": "route-target",
+        "targetId": "bakirkoy"
+      },
+      "points": {
+        "5": "B"
+      },
+      "trackCircuits": [
+        "W5",
+        "1-1",
+        "1-0"
+      ],
+      "stopSignals": [
+        "26.4"
+      ],
+      "kind": "exit"
+    },
+    {
+      "id": "26.4/Bakırköy",
+      "startSignalId": "26.4",
+      "target": {
+        "kind": "route-target",
+        "targetId": "bakirkoy"
+      },
+      "points": {
+        "5": "C"
+      },
+      "trackCircuits": [
+        "W5",
+        "1-1",
+        "1-0"
+      ],
+      "stopSignals": [
+        "26.2"
+      ],
+      "kind": "exit"
+    },
+    {
+      "id": "25/1",
+      "startSignalId": "25",
+      "target": {
+        "kind": "route-target",
+        "targetId": "1"
+      },
+      "points": {
+        "1": "B",
+        "3": "B"
+      },
+      "trackCircuits": [
+        "W1",
+        "2-1"
+      ],
+      "stopSignals": [],
+      "flankTrackCircuits": [
+        "W2"
+      ],
+      "kind": "entry"
+    },
+    {
+      "id": "25/3",
+      "startSignalId": "25",
+      "target": {
+        "kind": "route-target",
+        "targetId": "3"
+      },
+      "points": {
+        "1": "C",
+        "2": "C",
+        "3": "B",
+        "7": "B",
+        "Gs I": "B"
+      },
+      "trackCircuits": [
+        "W1",
+        "W2",
+        "3",
+        "W7"
+      ],
+      "stopSignals": [],
+      "kind": "entry"
+    },
+    {
+      "id": "27.1/Florya",
+      "startSignalId": "27.1",
+      "target": {
+        "kind": "route-target",
+        "targetId": "florya"
+      },
+      "points": {
+        "6": "B",
+        "10": "B",
+        "12": "B",
+        "13": "B",
+        "11": "B"
+      },
+      "trackCircuits": [
+        "W6",
+        "W10",
+        "W13",
+        "2-2",
+        "2-3"
+      ],
+      "stopSignals": [
+        "27.3",
+        "Ls 1"
+      ],
+      "kind": "exit"
+    },
+    {
+      "id": "27.3/Florya",
+      "startSignalId": "27.3",
+      "target": {
+        "kind": "route-target",
+        "targetId": "florya"
+      },
+      "points": {
+        "6": "C",
+        "10": "B",
+        "12": "B",
+        "13": "B",
+        "11": "B"
+      },
+      "trackCircuits": [
+        "W6",
+        "W10",
+        "W13",
+        "2-2",
+        "2-3"
+      ],
+      "stopSignals": [
+        "27.1",
+        "Ls 1"
+      ],
+      "kind": "exit"
+    }
+  ],
+  "continuousOperations": [
+    {
+      "id": "upper",
+      "targetId": "2",
+      "entryRouteId": "28/2",
+      "exitRouteId": "26.2/Bakırköy"
+    },
+    {
+      "id": "lower",
+      "targetId": "1",
+      "entryRouteId": "25/1",
+      "exitRouteId": "27.1/Florya"
+    }
+  ]
+}

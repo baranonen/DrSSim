@@ -1,0 +1,541 @@
+{
+  "version": 1,
+  "graphId": "yedikule",
+  "tischId": "yedikule",
+  "routeTargets": [
+    {
+      "id": "1",
+      "signalId": "10"
+    },
+    {
+      "id": "2",
+      "signalId": "15.1"
+    },
+    {
+      "id": "3",
+      "signalId": "15.3"
+    },
+    {
+      "id": "kumkapi",
+      "boundaryId": "kumkapi-track-1-side"
+    },
+    {
+      "id": "zeytinburnu",
+      "boundaryId": "zeytinburnu-track-2-side"
+    }
+  ],
+  "channels": {
+    "display.operation.YSGD": {
+      "kind": "operation-counter",
+      "command": "YSGD"
+    },
+    "display.operation.SYIYD": {
+      "kind": "operation-counter",
+      "command": "SYIYD"
+    },
+    "display.operation.MYD": {
+      "kind": "operation-counter",
+      "command": "MYD"
+    },
+    "display.operation.TCS": {
+      "kind": "operation-counter",
+      "command": "TCS"
+    },
+    "display.target.kumkapi.locked": {
+      "kind": "route-locked",
+      "targetId": "kumkapi"
+    },
+    "display.track.1-0": {
+      "kind": "track-circuit",
+      "id": "1-0"
+    },
+    "display.point.4.straight": {
+      "kind": "point-indicator",
+      "nodeId": "4",
+      "trackCircuitId": "W4",
+      "branch": "B"
+    },
+    "display.point.4.branch": {
+      "kind": "point-indicator",
+      "nodeId": "4",
+      "trackCircuitId": "W4",
+      "branch": "C"
+    },
+    "display.signal.10.stop": {
+      "kind": "signal-indicator",
+      "signalId": "10",
+      "indication": "stop"
+    },
+    "display.signal.10.proceed": {
+      "kind": "signal-indicator",
+      "signalId": "10",
+      "indication": "proceed"
+    },
+    "display.signal.10.substitute": {
+      "kind": "signal-indicator",
+      "signalId": "10",
+      "indication": "substitute"
+    },
+    "display.signal.10.shunt": {
+      "kind": "signal-indicator",
+      "signalId": "10",
+      "indication": "shunt"
+    },
+    "display.point.6.straight": {
+      "kind": "point-indicator",
+      "nodeId": "6",
+      "trackCircuitId": "W6",
+      "branch": "B"
+    },
+    "display.point.6.branch": {
+      "kind": "point-indicator",
+      "nodeId": "6",
+      "trackCircuitId": "W6",
+      "branch": "C"
+    },
+    "display.track.1-1": {
+      "kind": "track-circuit",
+      "id": "1-1"
+    },
+    "display.point.13.straight": {
+      "kind": "point-indicator",
+      "nodeId": "13",
+      "trackCircuitId": "W13",
+      "branch": "B"
+    },
+    "display.point.13.branch": {
+      "kind": "point-indicator",
+      "nodeId": "13",
+      "trackCircuitId": "W13",
+      "branch": "C"
+    },
+    "display.signal.12.stop": {
+      "kind": "signal-indicator",
+      "signalId": "12",
+      "indication": "stop"
+    },
+    "display.signal.12.proceed": {
+      "kind": "signal-indicator",
+      "signalId": "12",
+      "indication": "proceed"
+    },
+    "display.signal.12.substitute": {
+      "kind": "signal-indicator",
+      "signalId": "12",
+      "indication": "substitute"
+    },
+    "display.signal.12.locked": {
+      "kind": "signal-route-locked",
+      "signalId": "12"
+    },
+    "display.track.1-2": {
+      "kind": "track-circuit",
+      "id": "1-2"
+    },
+    "display.track.2-0": {
+      "kind": "track-circuit",
+      "id": "2-0"
+    },
+    "display.signal.13.stop": {
+      "kind": "signal-indicator",
+      "signalId": "13",
+      "indication": "stop"
+    },
+    "display.signal.13.proceed": {
+      "kind": "signal-indicator",
+      "signalId": "13",
+      "indication": "proceed"
+    },
+    "display.signal.13.substitute": {
+      "kind": "signal-indicator",
+      "signalId": "13",
+      "indication": "substitute"
+    },
+    "display.point.1.straight": {
+      "kind": "point-indicator",
+      "nodeId": "1",
+      "trackCircuitId": "W1",
+      "branch": "B"
+    },
+    "display.point.1.branch": {
+      "kind": "point-indicator",
+      "nodeId": "1",
+      "trackCircuitId": "W1",
+      "branch": "C"
+    },
+    "display.point.2.straight": {
+      "kind": "point-indicator",
+      "nodeId": "2",
+      "trackCircuitId": "W2",
+      "branch": "B"
+    },
+    "display.point.2.branch": {
+      "kind": "point-indicator",
+      "nodeId": "2",
+      "trackCircuitId": "W2",
+      "branch": "C"
+    },
+    "display.track.2-1": {
+      "kind": "track-circuit",
+      "id": "2-1"
+    },
+    "display.signal.15.1.stop": {
+      "kind": "signal-indicator",
+      "signalId": "15.1",
+      "indication": "stop"
+    },
+    "display.signal.15.1.proceed": {
+      "kind": "signal-indicator",
+      "signalId": "15.1",
+      "indication": "proceed"
+    },
+    "display.signal.15.1.substitute": {
+      "kind": "signal-indicator",
+      "signalId": "15.1",
+      "indication": "substitute"
+    },
+    "display.signal.15.1.shunt": {
+      "kind": "signal-indicator",
+      "signalId": "15.1",
+      "indication": "shunt"
+    },
+    "display.point.10.straight": {
+      "kind": "point-indicator",
+      "nodeId": "10",
+      "trackCircuitId": "W10",
+      "branch": "B"
+    },
+    "display.point.10.branch": {
+      "kind": "point-indicator",
+      "nodeId": "10",
+      "trackCircuitId": "W10",
+      "branch": "C"
+    },
+    "display.point.11.straight": {
+      "kind": "point-indicator",
+      "nodeId": "11",
+      "trackCircuitId": "W11",
+      "branch": "B"
+    },
+    "display.point.11.branch": {
+      "kind": "point-indicator",
+      "nodeId": "11",
+      "trackCircuitId": "W11",
+      "branch": "C"
+    },
+    "display.point.12.straight": {
+      "kind": "point-indicator",
+      "nodeId": "12",
+      "trackCircuitId": "W12",
+      "branch": "B"
+    },
+    "display.point.12.branch": {
+      "kind": "point-indicator",
+      "nodeId": "12",
+      "trackCircuitId": "W12",
+      "branch": "C"
+    },
+    "display.target.zeytinburnu.locked": {
+      "kind": "route-locked",
+      "targetId": "zeytinburnu"
+    },
+    "display.track.2-2": {
+      "kind": "track-circuit",
+      "id": "2-2"
+    },
+    "display.point.8.straight": {
+      "kind": "point-indicator",
+      "nodeId": "8",
+      "trackCircuitId": "W8",
+      "branch": "B"
+    },
+    "display.point.8.branch": {
+      "kind": "point-indicator",
+      "nodeId": "8",
+      "trackCircuitId": "W8",
+      "branch": "C"
+    },
+    "display.point.3.straight": {
+      "kind": "point-indicator",
+      "nodeId": "3",
+      "trackCircuitId": "W3",
+      "branch": "B"
+    },
+    "display.point.3.branch": {
+      "kind": "point-indicator",
+      "nodeId": "3",
+      "trackCircuitId": "W3",
+      "branch": "C"
+    },
+    "display.track.3": {
+      "kind": "track-circuit",
+      "id": "3"
+    },
+    "display.signal.15.3.stop": {
+      "kind": "signal-indicator",
+      "signalId": "15.3",
+      "indication": "stop"
+    },
+    "display.signal.15.3.proceed": {
+      "kind": "signal-indicator",
+      "signalId": "15.3",
+      "indication": "proceed"
+    },
+    "display.signal.15.3.substitute": {
+      "kind": "signal-indicator",
+      "signalId": "15.3",
+      "indication": "substitute"
+    },
+    "display.signal.15.3.shunt": {
+      "kind": "signal-indicator",
+      "signalId": "15.3",
+      "indication": "shunt"
+    },
+    "display.point.9.straight": {
+      "kind": "point-indicator",
+      "nodeId": "9",
+      "trackCircuitId": "W9",
+      "branch": "B"
+    },
+    "display.point.9.branch": {
+      "kind": "point-indicator",
+      "nodeId": "9",
+      "trackCircuitId": "W9",
+      "branch": "C"
+    },
+    "display.point.Gs II.straight": {
+      "kind": "point-indicator",
+      "nodeId": "Gs II",
+      "trackCircuitId": "Gs II",
+      "branch": "B"
+    },
+    "display.point.Gs II.branch": {
+      "kind": "point-indicator",
+      "nodeId": "Gs II",
+      "trackCircuitId": "Gs II",
+      "branch": "C"
+    },
+    "display.point.Gs I.straight": {
+      "kind": "point-indicator",
+      "nodeId": "Gs I",
+      "trackCircuitId": "Gs I",
+      "branch": "C"
+    },
+    "display.point.Gs I.branch": {
+      "kind": "point-indicator",
+      "nodeId": "Gs I",
+      "trackCircuitId": "Gs I",
+      "branch": "B"
+    },
+    "display.point.7b.straight": {
+      "kind": "point-indicator",
+      "nodeId": "7-B",
+      "trackCircuitId": "W7",
+      "branch": "B"
+    },
+    "display.point.7b.branch": {
+      "kind": "point-indicator",
+      "nodeId": "7-B",
+      "trackCircuitId": "W7",
+      "branch": "C"
+    },
+    "display.point.7a.straight": {
+      "kind": "point-indicator",
+      "nodeId": "7-A",
+      "trackCircuitId": "W7",
+      "branch": "B"
+    },
+    "display.point.7a.branch": {
+      "kind": "point-indicator",
+      "nodeId": "7-A",
+      "trackCircuitId": "W7",
+      "branch": "C"
+    },
+    "display.point.5cd.straight": {
+      "kind": "point-indicator",
+      "nodeId": "5-CD",
+      "trackCircuitId": "W5",
+      "branch": "B"
+    },
+    "display.point.5cd.branch": {
+      "kind": "point-indicator",
+      "nodeId": "5-CD",
+      "trackCircuitId": "W5",
+      "branch": "C"
+    },
+    "display.continuous.track-1.active": {
+      "kind": "continuous-operation",
+      "id": "track-1",
+      "state": "active"
+    },
+    "display.continuous.track-1.local": {
+      "kind": "continuous-operation",
+      "id": "track-1",
+      "state": "local"
+    },
+    "display.continuous.track-2.active": {
+      "kind": "continuous-operation",
+      "id": "track-2",
+      "state": "active"
+    },
+    "display.continuous.track-2.local": {
+      "kind": "continuous-operation",
+      "id": "track-2",
+      "state": "local"
+    },
+    "display.signal.13.locked": {
+      "kind": "signal-route-locked",
+      "signalId": "13"
+    }
+  },
+  "buttons": {
+    "yedikule/field-0105:RT": {
+      "kind": "route-target",
+      "targetId": "kumkapi"
+    },
+    "yedikule/field-0205:MD": {
+      "kind": "point",
+      "nodeId": "4"
+    },
+    "yedikule/field-0405:SD": {
+      "kind": "signal",
+      "signalId": "10"
+    },
+    "yedikule/field-0705:MD": {
+      "kind": "point",
+      "nodeId": "6"
+    },
+    "yedikule/field-0805:RT": {
+      "kind": "route-target",
+      "targetId": "1"
+    },
+    "yedikule/field-1205:MD": {
+      "kind": "point",
+      "nodeId": "13"
+    },
+    "yedikule/field-1305:SD": {
+      "kind": "signal",
+      "signalId": "12"
+    },
+    "yedikule/field-0203:SD": {
+      "kind": "signal",
+      "signalId": "13"
+    },
+    "yedikule/field-0403:MD": {
+      "kind": "point",
+      "nodeId": "1"
+    },
+    "yedikule/field-0503:MD": {
+      "kind": "point",
+      "nodeId": "2"
+    },
+    "yedikule/field-0703:RT": {
+      "kind": "route-target",
+      "targetId": "2"
+    },
+    "yedikule/field-0903:SD": {
+      "kind": "signal",
+      "signalId": "15.1"
+    },
+    "yedikule/field-1003:MD": {
+      "kind": "point",
+      "nodeId": "10"
+    },
+    "yedikule/field-1103:MD": {
+      "kind": "point",
+      "nodeId": "11"
+    },
+    "yedikule/field-1203:MD": {
+      "kind": "point",
+      "nodeId": "12"
+    },
+    "yedikule/field-1303:RT": {
+      "kind": "route-target",
+      "targetId": "zeytinburnu"
+    },
+    "yedikule/field-0906:MD": {
+      "kind": "point",
+      "nodeId": "8"
+    },
+    "yedikule/field-0702:MD": {
+      "kind": "point",
+      "nodeId": "3"
+    },
+    "yedikule/field-0802:RT": {
+      "kind": "route-target",
+      "targetId": "3"
+    },
+    "yedikule/field-0902:SD": {
+      "kind": "signal",
+      "signalId": "15.3"
+    },
+    "yedikule/field-1002:MD": {
+      "kind": "point",
+      "nodeId": "9"
+    },
+    "yedikule/field-1102:MD": {
+      "kind": "point",
+      "nodeId": "Gs II"
+    },
+    "yedikule/field-0801:MD": {
+      "kind": "point",
+      "nodeId": "Gs I"
+    },
+    "yedikule/point-7ab:MD1": {
+      "kind": "point",
+      "nodeId": "7-B"
+    },
+    "yedikule/point-7ab:MD2": {
+      "kind": "point",
+      "nodeId": "7-A"
+    },
+    "yedikule/point-5cd:MD": {
+      "kind": "point",
+      "nodeId": "5-CD"
+    },
+    "yedikule/mgd-sgd:MGD": {
+      "kind": "group",
+      "command": "MGD"
+    },
+    "yedikule/mgd-sgd:SGD": {
+      "kind": "group",
+      "command": "SGD"
+    },
+    "yedikule/stgd:STGD": {
+      "kind": "group",
+      "command": "STGD"
+    },
+    "yedikule/ysgd:YSGD": {
+      "kind": "group",
+      "command": "YSGD"
+    },
+    "yedikule/myd:MYD": {
+      "kind": "group",
+      "command": "MYD"
+    },
+    "yedikule/syiyd:SYIYD": {
+      "kind": "group",
+      "command": "SYIYD"
+    },
+    "yedikule/continuous-operation-track-1:DISD": {
+      "kind": "continuous-operation",
+      "id": "track-1",
+      "command": "DISD"
+    },
+    "yedikule/continuous-operation-track-1:DGBD": {
+      "kind": "continuous-operation",
+      "id": "track-1",
+      "command": "DGBD"
+    },
+    "yedikule/continuous-operation-track-2:DISD": {
+      "kind": "continuous-operation",
+      "id": "track-2",
+      "command": "DISD"
+    },
+    "yedikule/continuous-operation-track-2:DGBD": {
+      "kind": "continuous-operation",
+      "id": "track-2",
+      "command": "DGBD"
+    }
+  }
+}

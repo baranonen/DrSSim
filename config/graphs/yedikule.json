@@ -1,0 +1,1025 @@
+{
+  "version": 1,
+  "id": "yedikule",
+  "lengthUnit": "m",
+  "draft": false,
+  "nodes": [
+    {
+      "id": "1",
+      "kind": "point"
+    },
+    {
+      "id": "2",
+      "kind": "point"
+    },
+    {
+      "id": "3",
+      "kind": "point"
+    },
+    {
+      "id": "4",
+      "kind": "point"
+    },
+    {
+      "id": "6",
+      "kind": "point"
+    },
+    {
+      "id": "8",
+      "kind": "point"
+    },
+    {
+      "id": "9",
+      "kind": "point"
+    },
+    {
+      "id": "10",
+      "kind": "point"
+    },
+    {
+      "id": "11",
+      "kind": "point"
+    },
+    {
+      "id": "12",
+      "kind": "point"
+    },
+    {
+      "id": "13",
+      "kind": "point"
+    },
+    {
+      "id": "5-CD",
+      "kind": "point"
+    },
+    {
+      "id": "7-A",
+      "kind": "point",
+      "singleSlipId": "7"
+    },
+    {
+      "id": "7-B",
+      "kind": "point",
+      "singleSlipId": "7"
+    },
+    {
+      "id": "Gs I",
+      "kind": "derailer",
+      "derailingBranch": "B"
+    },
+    {
+      "id": "Gs II",
+      "kind": "derailer",
+      "derailingBranch": "C"
+    }
+  ],
+  "edges": [
+    {
+      "id": "zeytinburnu-to-signal-12",
+      "lengthM": 500,
+      "ends": {
+        "A": {
+          "kind": "boundary",
+          "id": "zeytinburnu-track-1-side"
+        },
+        "B": {
+          "kind": "edge",
+          "edgeId": "signal-12-to-point-13-A",
+          "end": "A"
+        }
+      },
+      "trackCircuits": [
+        {
+          "id": "1-2",
+          "fromM": 0,
+          "toM": 500
+        }
+      ],
+      "signals": [
+        {
+          "id": "EndOfShunting-Zeytinburnu-1",
+          "atM": 350,
+          "towards": "A",
+          "type": "EndOfShunting"
+        }
+      ]
+    },
+    {
+      "id": "signal-12-to-point-13-A",
+      "lengthM": 300,
+      "ends": {
+        "A": {
+          "kind": "edge",
+          "edgeId": "zeytinburnu-to-signal-12",
+          "end": "B"
+        },
+        "B": {
+          "kind": "point",
+          "nodeId": "13",
+          "port": "A"
+        }
+      },
+      "trackCircuits": [
+        {
+          "id": "W13",
+          "fromM": 0,
+          "toM": 300
+        }
+      ],
+      "signals": [
+        {
+          "id": "12",
+          "atM": 0,
+          "towards": "B",
+          "type": "normal",
+          "capabilities": {
+            "substitute": true,
+            "shunt": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "point-13-B-to-point-7b-A",
+      "lengthM": 80,
+      "ends": {
+        "A": {
+          "kind": "point",
+          "nodeId": "13",
+          "port": "B"
+        },
+        "B": {
+          "kind": "point",
+          "nodeId": "7-B",
+          "port": "A"
+        }
+      },
+      "trackCircuits": [
+        {
+          "id": "W13",
+          "fromM": 0,
+          "toM": 40
+        },
+        {
+          "id": "W7",
+          "fromM": 40,
+          "toM": 80
+        }
+      ],
+      "signals": []
+    },
+    {
+      "id": "point-7b-C-to-point-7a-B",
+      "lengthM": 0,
+      "ends": {
+        "A": {
+          "kind": "point",
+          "nodeId": "7-B",
+          "port": "C"
+        },
+        "B": {
+          "kind": "point",
+          "nodeId": "7-A",
+          "port": "B"
+        }
+      },
+      "trackCircuits": [],
+      "signals": [],
+      "kind": "point-link"
+    },
+    {
+      "id": "point-7a-A-to-point-8-C",
+      "lengthM": 40,
+      "ends": {
+        "A": {
+          "kind": "point",
+          "nodeId": "7-A",
+          "port": "A"
+        },
+        "B": {
+          "kind": "point",
+          "nodeId": "8",
+          "port": "C"
+        }
+      },
+      "trackCircuits": [
+        {
+          "id": "W7",
+          "fromM": 0,
+          "toM": 20
+        },
+        {
+          "id": "W8",
+          "fromM": 20,
+          "toM": 40
+        }
+      ],
+      "signals": []
+    },
+    {
+      "id": "point-8-B-dead-end",
+      "lengthM": 20,
+      "ends": {
+        "A": {
+          "kind": "point",
+          "nodeId": "8",
+          "port": "B"
+        },
+        "B": {
+          "kind": "dead-end"
+        }
+      },
+      "trackCircuits": [
+        {
+          "id": "W8",
+          "fromM": 0,
+          "toM": 20
+        }
+      ],
+      "signals": []
+    },
+    {
+      "id": "point-8-A-to-point-5cd-A",
+      "lengthM": 210,
+      "ends": {
+        "A": {
+          "kind": "point",
+          "nodeId": "8",
+          "port": "A"
+        },
+        "B": {
+          "kind": "point",
+          "nodeId": "5-CD",
+          "port": "A"
+        }
+      },
+      "trackCircuits": [
+        {
+          "id": "W8",
+          "fromM": 0,
+          "toM": 5
+        },
+        {
+          "id": "W5",
+          "fromM": 205,
+          "toM": 210
+        }
+      ],
+      "signals": []
+    },
+    {
+      "id": "point-5cd-B-dead-end",
+      "lengthM": 20,
+      "ends": {
+        "A": {
+          "kind": "point",
+          "nodeId": "5-CD",
+          "port": "B"
+        },
+        "B": {
+          "kind": "dead-end"
+        }
+      },
+      "trackCircuits": [
+        {
+          "id": "W5",
+          "fromM": 0,
+          "toM": 20
+        }
+      ],
+      "signals": []
+    },
+    {
+      "id": "point-5cd-C-to-point-6-C",
+      "lengthM": 40,
+      "ends": {
+        "A": {
+          "kind": "point",
+          "nodeId": "5-CD",
+          "port": "C"
+        },
+        "B": {
+          "kind": "point",
+          "nodeId": "6",
+          "port": "C"
+        }
+      },
+      "trackCircuits": [
+        {
+          "id": "W5",
+          "fromM": 0,
+          "toM": 20
+        },
+        {
+          "id": "W6",
+          "fromM": 20,
+          "toM": 40
+        }
+      ],
+      "signals": []
+    },
+    {
+      "id": "point-7b-B-to-point-6-B",
+      "lengthM": 240,
+      "ends": {
+        "A": {
+          "kind": "point",
+          "nodeId": "7-B",
+          "port": "B"
+        },
+        "B": {
+          "kind": "point",
+          "nodeId": "6",
+          "port": "B"
+        }
+      },
+      "trackCircuits": [
+        {
+          "id": "W7",
+          "fromM": 0,
+          "toM": 20
+        },
+        {
+          "id": "1-1",
+          "fromM": 20,
+          "toM": 220
+        },
+        {
+          "id": "W6",
+          "fromM": 220,
+          "toM": 240
+        }
+      ],
+      "signals": []
+    },
+    {
+      "id": "point-6-A-to-point-4-B",
+      "lengthM": 120,
+      "ends": {
+        "A": {
+          "kind": "point",
+          "nodeId": "6",
+          "port": "A"
+        },
+        "B": {
+          "kind": "point",
+          "nodeId": "4",
+          "port": "B"
+        }
+      },
+      "trackCircuits": [
+        {
+          "id": "W6",
+          "fromM": 0,
+          "toM": 100
+        },
+        {
+          "id": "W4",
+          "fromM": 100,
+          "toM": 120
+        }
+      ],
+      "signals": [
+        {
+          "id": "10",
+          "atM": 100,
+          "towards": "B",
+          "type": "normal",
+          "capabilities": {
+            "substitute": true,
+            "shunt": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "point-4-A-to-kumkapi",
+      "lengthM": 1005,
+      "ends": {
+        "A": {
+          "kind": "point",
+          "nodeId": "4",
+          "port": "A"
+        },
+        "B": {
+          "kind": "boundary",
+          "id": "kumkapi-track-1-side"
+        }
+      },
+      "trackCircuits": [
+        {
+          "id": "W4",
+          "fromM": 0,
+          "toM": 5
+        },
+        {
+          "id": "1-0",
+          "fromM": 5,
+          "toM": 1005
+        }
+      ],
+      "signals": [
+        {
+          "id": "EndOfShunting-Kumkapi-1",
+          "atM": 155,
+          "towards": "B",
+          "type": "EndOfShunting"
+        }
+      ]
+    },
+    {
+      "id": "kumkapi-to-signal-13",
+      "lengthM": 500,
+      "ends": {
+        "A": {
+          "kind": "boundary",
+          "id": "kumkapi-track-2-side"
+        },
+        "B": {
+          "kind": "edge",
+          "edgeId": "signal-13-to-point-1-B",
+          "end": "A"
+        }
+      },
+      "trackCircuits": [
+        {
+          "id": "2-0",
+          "fromM": 0,
+          "toM": 500
+        }
+      ],
+      "signals": []
+    },
+    {
+      "id": "signal-13-to-point-1-B",
+      "lengthM": 20,
+      "ends": {
+        "A": {
+          "kind": "edge",
+          "edgeId": "kumkapi-to-signal-13",
+          "end": "B"
+        },
+        "B": {
+          "kind": "point",
+          "nodeId": "1",
+          "port": "B"
+        }
+      },
+      "trackCircuits": [
+        {
+          "id": "W1",
+          "fromM": 0,
+          "toM": 20
+        }
+      ],
+      "signals": [
+        {
+          "id": "13",
+          "atM": 0,
+          "towards": "B",
+          "type": "normal",
+          "capabilities": {
+            "substitute": true,
+            "shunt": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "point-1-C-to-point-4-C",
+      "lengthM": 40,
+      "ends": {
+        "A": {
+          "kind": "point",
+          "nodeId": "1",
+          "port": "C"
+        },
+        "B": {
+          "kind": "point",
+          "nodeId": "4",
+          "port": "C"
+        }
+      },
+      "trackCircuits": [
+        {
+          "id": "W1",
+          "fromM": 0,
+          "toM": 20
+        },
+        {
+          "id": "W4",
+          "fromM": 20,
+          "toM": 40
+        }
+      ],
+      "signals": []
+    },
+    {
+      "id": "point-1-A-to-point-2-A",
+      "lengthM": 40,
+      "ends": {
+        "A": {
+          "kind": "point",
+          "nodeId": "1",
+          "port": "A"
+        },
+        "B": {
+          "kind": "point",
+          "nodeId": "2",
+          "port": "A"
+        }
+      },
+      "trackCircuits": [
+        {
+          "id": "W1",
+          "fromM": 0,
+          "toM": 20
+        },
+        {
+          "id": "W2",
+          "fromM": 20,
+          "toM": 40
+        }
+      ],
+      "signals": []
+    },
+    {
+      "id": "point-2-C-to-point-3-A",
+      "lengthM": 40,
+      "ends": {
+        "A": {
+          "kind": "point",
+          "nodeId": "2",
+          "port": "C"
+        },
+        "B": {
+          "kind": "point",
+          "nodeId": "3",
+          "port": "A"
+        }
+      },
+      "trackCircuits": [
+        {
+          "id": "W2",
+          "fromM": 0,
+          "toM": 20
+        },
+        {
+          "id": "W3",
+          "fromM": 20,
+          "toM": 40
+        }
+      ],
+      "signals": []
+    },
+    {
+      "id": "point-3-C-to-gs-I-C",
+      "lengthM": 40,
+      "ends": {
+        "A": {
+          "kind": "point",
+          "nodeId": "3",
+          "port": "C"
+        },
+        "B": {
+          "kind": "point",
+          "nodeId": "Gs I",
+          "port": "C"
+        }
+      },
+      "trackCircuits": [
+        {
+          "id": "W3",
+          "fromM": 0,
+          "toM": 20
+        },
+        {
+          "id": "Gs I",
+          "fromM": 20,
+          "toM": 40
+        }
+      ],
+      "signals": []
+    },
+    {
+      "id": "gs-I-A-dead-end",
+      "lengthM": 170,
+      "ends": {
+        "A": {
+          "kind": "point",
+          "nodeId": "Gs I",
+          "port": "A"
+        },
+        "B": {
+          "kind": "dead-end"
+        }
+      },
+      "trackCircuits": [
+        {
+          "id": "Gs I",
+          "fromM": 0,
+          "toM": 20
+        }
+      ],
+      "signals": []
+    },
+    {
+      "id": "gs-I-B-derailing-end",
+      "lengthM": 0,
+      "ends": {
+        "A": {
+          "kind": "point",
+          "nodeId": "Gs I",
+          "port": "B"
+        },
+        "B": {
+          "kind": "dead-end"
+        }
+      },
+      "trackCircuits": [],
+      "signals": []
+    },
+    {
+      "id": "point-3-B-to-signal-15.3",
+      "lengthM": 220,
+      "ends": {
+        "A": {
+          "kind": "point",
+          "nodeId": "3",
+          "port": "B"
+        },
+        "B": {
+          "kind": "edge",
+          "edgeId": "signal-15.3-to-point-9-A",
+          "end": "A"
+        }
+      },
+      "trackCircuits": [
+        {
+          "id": "W3",
+          "fromM": 0,
+          "toM": 20
+        },
+        {
+          "id": "3",
+          "fromM": 20,
+          "toM": 220
+        }
+      ],
+      "signals": []
+    },
+    {
+      "id": "signal-15.3-to-point-9-A",
+      "lengthM": 20,
+      "ends": {
+        "A": {
+          "kind": "edge",
+          "edgeId": "point-3-B-to-signal-15.3",
+          "end": "B"
+        },
+        "B": {
+          "kind": "point",
+          "nodeId": "9",
+          "port": "A"
+        }
+      },
+      "trackCircuits": [
+        {
+          "id": "W9",
+          "fromM": 0,
+          "toM": 20
+        }
+      ],
+      "signals": [
+        {
+          "id": "15.3",
+          "atM": 0,
+          "towards": "B",
+          "type": "normal",
+          "capabilities": {
+            "substitute": true,
+            "shunt": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "point-9-B-to-gs-II-B",
+      "lengthM": 40,
+      "ends": {
+        "A": {
+          "kind": "point",
+          "nodeId": "9",
+          "port": "B"
+        },
+        "B": {
+          "kind": "point",
+          "nodeId": "Gs II",
+          "port": "B"
+        }
+      },
+      "trackCircuits": [
+        {
+          "id": "W9",
+          "fromM": 0,
+          "toM": 20
+        },
+        {
+          "id": "Gs II",
+          "fromM": 20,
+          "toM": 40
+        }
+      ],
+      "signals": []
+    },
+    {
+      "id": "gs-II-A-dead-end",
+      "lengthM": 170,
+      "ends": {
+        "A": {
+          "kind": "point",
+          "nodeId": "Gs II",
+          "port": "A"
+        },
+        "B": {
+          "kind": "dead-end"
+        }
+      },
+      "trackCircuits": [
+        {
+          "id": "Gs II",
+          "fromM": 0,
+          "toM": 20
+        }
+      ],
+      "signals": []
+    },
+    {
+      "id": "gs-II-C-derailing-end",
+      "lengthM": 0,
+      "ends": {
+        "A": {
+          "kind": "point",
+          "nodeId": "Gs II",
+          "port": "C"
+        },
+        "B": {
+          "kind": "dead-end"
+        }
+      },
+      "trackCircuits": [],
+      "signals": []
+    },
+    {
+      "id": "point-2-B-to-signal-15.1",
+      "lengthM": 220,
+      "ends": {
+        "A": {
+          "kind": "point",
+          "nodeId": "2",
+          "port": "B"
+        },
+        "B": {
+          "kind": "edge",
+          "edgeId": "signal-15.1-to-point-10-A",
+          "end": "A"
+        }
+      },
+      "trackCircuits": [
+        {
+          "id": "W2",
+          "fromM": 0,
+          "toM": 20
+        },
+        {
+          "id": "2-1",
+          "fromM": 20,
+          "toM": 220
+        }
+      ],
+      "signals": [
+        {
+          "id": "EndOfShunting-Track-2-1",
+          "atM": 170,
+          "towards": "B",
+          "type": "EndOfShunting"
+        }
+      ]
+    },
+    {
+      "id": "signal-15.1-to-point-10-A",
+      "lengthM": 20,
+      "ends": {
+        "A": {
+          "kind": "edge",
+          "edgeId": "point-2-B-to-signal-15.1",
+          "end": "B"
+        },
+        "B": {
+          "kind": "point",
+          "nodeId": "10",
+          "port": "A"
+        }
+      },
+      "trackCircuits": [
+        {
+          "id": "W10",
+          "fromM": 0,
+          "toM": 20
+        }
+      ],
+      "signals": [
+        {
+          "id": "15.1",
+          "atM": 0,
+          "towards": "B",
+          "type": "normal",
+          "capabilities": {
+            "substitute": true,
+            "shunt": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "point-10-B-to-point-11-B",
+      "lengthM": 40,
+      "ends": {
+        "A": {
+          "kind": "point",
+          "nodeId": "10",
+          "port": "B"
+        },
+        "B": {
+          "kind": "point",
+          "nodeId": "11",
+          "port": "B"
+        }
+      },
+      "trackCircuits": [
+        {
+          "id": "W10",
+          "fromM": 0,
+          "toM": 20
+        },
+        {
+          "id": "W11",
+          "fromM": 20,
+          "toM": 40
+        }
+      ],
+      "signals": []
+    },
+    {
+      "id": "point-11-C-to-point-9-C",
+      "lengthM": 40,
+      "ends": {
+        "A": {
+          "kind": "point",
+          "nodeId": "11",
+          "port": "C"
+        },
+        "B": {
+          "kind": "point",
+          "nodeId": "9",
+          "port": "C"
+        }
+      },
+      "trackCircuits": [
+        {
+          "id": "W11",
+          "fromM": 0,
+          "toM": 20
+        },
+        {
+          "id": "W9",
+          "fromM": 20,
+          "toM": 40
+        }
+      ],
+      "signals": []
+    },
+    {
+      "id": "point-11-A-to-point-12-B",
+      "lengthM": 40,
+      "ends": {
+        "A": {
+          "kind": "point",
+          "nodeId": "11",
+          "port": "A"
+        },
+        "B": {
+          "kind": "point",
+          "nodeId": "12",
+          "port": "B"
+        }
+      },
+      "trackCircuits": [
+        {
+          "id": "W11",
+          "fromM": 0,
+          "toM": 20
+        },
+        {
+          "id": "W12",
+          "fromM": 20,
+          "toM": 40
+        }
+      ],
+      "signals": []
+    },
+    {
+      "id": "point-12-A-to-zeytinburnu",
+      "lengthM": 1005,
+      "ends": {
+        "A": {
+          "kind": "point",
+          "nodeId": "12",
+          "port": "A"
+        },
+        "B": {
+          "kind": "boundary",
+          "id": "zeytinburnu-track-2-side"
+        }
+      },
+      "trackCircuits": [
+        {
+          "id": "W12",
+          "fromM": 0,
+          "toM": 5
+        },
+        {
+          "id": "2-2",
+          "fromM": 5,
+          "toM": 1005
+        }
+      ],
+      "signals": [
+        {
+          "id": "EndOfShunting-Zeytinburnu-2",
+          "atM": 155,
+          "towards": "B",
+          "type": "EndOfShunting"
+        }
+      ]
+    },
+    {
+      "id": "point-10-C-to-point-13-C",
+      "lengthM": 80,
+      "ends": {
+        "A": {
+          "kind": "point",
+          "nodeId": "10",
+          "port": "C"
+        },
+        "B": {
+          "kind": "point",
+          "nodeId": "13",
+          "port": "C"
+        }
+      },
+      "trackCircuits": [
+        {
+          "id": "W10",
+          "fromM": 0,
+          "toM": 40
+        },
+        {
+          "id": "W13",
+          "fromM": 40,
+          "toM": 80
+        }
+      ],
+      "signals": []
+    },
+    {
+      "id": "point-12-C-to-point-7a-C",
+      "lengthM": 80,
+      "ends": {
+        "A": {
+          "kind": "point",
+          "nodeId": "12",
+          "port": "C"
+        },
+        "B": {
+          "kind": "point",
+          "nodeId": "7-A",
+          "port": "C"
+        }
+      },
+      "trackCircuits": [
+        {
+          "id": "W12",
+          "fromM": 0,
+          "toM": 40
+        },
+        {
+          "id": "W7",
+          "fromM": 40,
+          "toM": 80
+        }
+      ],
+      "signals": []
+    }
+  ]
+}

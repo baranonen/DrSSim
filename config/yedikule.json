@@ -1,0 +1,575 @@
+{
+  "version": 1,
+  "id": "yedikule",
+  "name": "Yedikule",
+  "columns": 13,
+  "rows": 7,
+  "fields": [
+    {
+      "id": "klappe-storage",
+      "address": "0107",
+      "tile": "Field",
+      "klappeStorage": true
+    },
+    {
+      "id": "mgd-sgd",
+      "address": "0207",
+      "tile": "MGD-SGD"
+    },
+    {
+      "id": "stgd",
+      "address": "0307",
+      "tile": "STGD"
+    },
+    {
+      "id": "ysgd",
+      "address": "0407",
+      "tile": "YSGD",
+      "buttons": {
+        "YSGD": {
+          "fixedKlappe": "hexagon"
+        }
+      },
+      "bindings": {
+        "counter.value": "display.operation.YSGD"
+      }
+    },
+    {
+      "id": "fault-indicators",
+      "address": "0507",
+      "tile": "SAM-MAM"
+    },
+    {
+      "id": "mains-indicators",
+      "address": "0607",
+      "tile": "SM"
+    },
+    {
+      "id": "battery-60",
+      "address": "0707",
+      "tile": "BATTERY-60"
+    },
+    {
+      "id": "battery-12",
+      "address": "0807",
+      "tile": "BATTERY-12"
+    },
+    {
+      "id": "syiyd",
+      "address": "0907",
+      "tile": "SYIYD",
+      "buttons": {
+        "SYIYD": {
+          "fixedKlappe": "hexagon"
+        }
+      },
+      "bindings": {
+        "counter.value": "display.operation.SYIYD"
+      }
+    },
+    {
+      "id": "myd",
+      "address": "1007",
+      "tile": "MYD",
+      "buttons": {
+        "MYD": {
+          "fixedKlappe": "hexagon"
+        }
+      },
+      "bindings": {
+        "counter.value": "display.operation.MYD"
+      }
+    },
+    {
+      "id": "tcs",
+      "address": "1107",
+      "tile": "TCS",
+      "bindings": {
+        "counter.value": "display.operation.TCS"
+      }
+    },
+    {
+      "id": "day-night",
+      "address": "1207",
+      "tile": "GE-GU"
+    },
+    {
+      "id": "desk-key-switch",
+      "address": "1307",
+      "tile": "Field"
+    },
+    {
+      "id": "desk-key-switch-lower",
+      "address": "1306",
+      "tile": "Field"
+    },
+    {
+      "id": "field-0105",
+      "address": "0105",
+      "tile": "RouteTargetWithTopNameplate",
+      "labels": {
+        "label.name": "Kumkapı"
+      },
+      "bindings": {
+        "route.locked": "display.target.kumkapi.locked",
+        "track.1": "display.track.1-0",
+        "track.2": "display.track.1-0"
+      },
+      "buttons": {
+        "RT": {
+          "labelKey": "buttons.LT"
+        }
+      }
+    },
+    {
+      "id": "field-0205",
+      "address": "0205",
+      "tile": "PointToTopRight",
+      "orientation": "mirror-y",
+      "labels": {
+        "label.name": "4"
+      },
+      "bindings": {
+        "point.straight": "display.point.4.straight",
+        "point.branch": "display.point.4.branch"
+      }
+    },
+    {
+      "id": "field-0305",
+      "address": "0305",
+      "tile": "Track"
+    },
+    {
+      "id": "field-0405",
+      "address": "0405",
+      "tile": "FourAspectSignalToLeft",
+      "labels": {
+        "label.name": "10"
+      },
+      "bindings": {
+        "signal.red": "display.signal.10.stop",
+        "signal.green": "display.signal.10.proceed",
+        "signal.triangle": "display.signal.10.substitute",
+        "signal.aux": "display.signal.10.shunt"
+      }
+    },
+    {
+      "id": "field-0505",
+      "address": "0505",
+      "tile": "Track"
+    },
+    {
+      "id": "field-0605",
+      "address": "0605",
+      "tile": "Track"
+    },
+    {
+      "id": "field-0705",
+      "address": "0705",
+      "tile": "PointToTopRight",
+      "labels": {
+        "label.name": "6"
+      },
+      "bindings": {
+        "point.straight": "display.point.6.straight",
+        "point.branch": "display.point.6.branch"
+      }
+    },
+    {
+      "id": "field-0805",
+      "address": "0805",
+      "tile": "RouteTargetWithTopNameplateWithoutRouteLamp",
+      "labels": {
+        "label.name": "1"
+      },
+      "bindings": {
+        "track.1": "display.track.1-1",
+        "track.2": "display.track.1-1"
+      }
+    },
+    {
+      "id": "field-0905",
+      "address": "0905",
+      "tile": "Track"
+    },
+    {
+      "id": "field-1105",
+      "address": "1105",
+      "tile": "Track"
+    },
+    {
+      "id": "field-1205",
+      "address": "1205",
+      "tile": "PointToTopRight",
+      "orientation": "rotate-180",
+      "labels": {
+        "label.name": "13"
+      },
+      "bindings": {
+        "point.straight": "display.point.13.straight",
+        "point.branch": "display.point.13.branch"
+      }
+    },
+    {
+      "id": "field-1305",
+      "address": "1305",
+      "tile": "ThreeAspectSignalToLeftWithRouteLamp",
+      "labels": {
+        "label.name": "12"
+      },
+      "bindings": {
+        "track.1": "display.track.1-2",
+        "track.2": "display.track.1-2",
+        "signal.red": "display.signal.12.stop",
+        "signal.green": "display.signal.12.proceed",
+        "signal.triangle": "display.signal.12.substitute",
+        "signal.route": "display.signal.12.locked"
+      }
+    },
+    {
+      "id": "field-0103",
+      "address": "0103",
+      "tile": "TrackWithTrackCircuit",
+      "bindings": {
+        "track.1": "display.track.2-0",
+        "track.2": "display.track.2-0"
+      }
+    },
+    {
+      "id": "field-0203",
+      "address": "0203",
+      "tile": "ThreeAspectSignalToRightWithRouteLampWithoutTrackCircuit",
+      "labels": {
+        "label.name": "13"
+      },
+      "bindings": {
+        "signal.red": "display.signal.13.stop",
+        "signal.green": "display.signal.13.proceed",
+        "signal.triangle": "display.signal.13.substitute",
+        "signal.route": "display.signal.13.locked"
+      }
+    },
+    {
+      "id": "field-0303",
+      "address": "0303",
+      "tile": "Track"
+    },
+    {
+      "id": "field-0403",
+      "address": "0403",
+      "tile": "PointToTopRight",
+      "orientation": "mirror-x",
+      "labels": {
+        "label.name": "1"
+      },
+      "bindings": {
+        "point.straight": "display.point.1.straight",
+        "point.branch": "display.point.1.branch"
+      }
+    },
+    {
+      "id": "field-0503",
+      "address": "0503",
+      "tile": "PointToTopRight",
+      "orientation": "mirror-y",
+      "labels": {
+        "label.name": "2"
+      },
+      "bindings": {
+        "point.straight": "display.point.2.straight",
+        "point.branch": "display.point.2.branch"
+      }
+    },
+    {
+      "id": "field-0603",
+      "address": "0603",
+      "tile": "Track"
+    },
+    {
+      "id": "field-0703",
+      "address": "0703",
+      "tile": "RouteTargetWithTopNameplateWithoutRouteLamp",
+      "labels": {
+        "label.name": "2"
+      },
+      "bindings": {
+        "track.1": "display.track.2-1",
+        "track.2": "display.track.2-1"
+      }
+    },
+    {
+      "id": "field-0803",
+      "address": "0803",
+      "tile": "Track"
+    },
+    {
+      "id": "field-0903",
+      "address": "0903",
+      "tile": "FourAspectSignalToRight",
+      "labels": {
+        "label.name": "15.1"
+      },
+      "bindings": {
+        "signal.red": "display.signal.15.1.stop",
+        "signal.green": "display.signal.15.1.proceed",
+        "signal.triangle": "display.signal.15.1.substitute",
+        "signal.aux": "display.signal.15.1.shunt"
+      }
+    },
+    {
+      "id": "field-1003",
+      "address": "1003",
+      "tile": "PointToTopRight",
+      "labels": {
+        "label.name": "10"
+      },
+      "bindings": {
+        "point.straight": "display.point.10.straight",
+        "point.branch": "display.point.10.branch"
+      }
+    },
+    {
+      "id": "field-1103",
+      "address": "1103",
+      "tile": "PointToTopRight",
+      "orientation": "rotate-180",
+      "labels": {
+        "label.name": "11"
+      },
+      "bindings": {
+        "point.straight": "display.point.11.straight",
+        "point.branch": "display.point.11.branch"
+      }
+    },
+    {
+      "id": "field-1203",
+      "address": "1203",
+      "tile": "PointToTopRight",
+      "orientation": "mirror-x",
+      "labels": {
+        "label.name": "12"
+      },
+      "bindings": {
+        "point.straight": "display.point.12.straight",
+        "point.branch": "display.point.12.branch"
+      }
+    },
+    {
+      "id": "field-1303",
+      "address": "1303",
+      "tile": "RouteTargetWithBottomNameplate",
+      "labels": {
+        "label.name": "Z. Burnu"
+      },
+      "bindings": {
+        "track.1": "display.track.2-2",
+        "track.2": "display.track.2-2",
+        "route.locked": "display.target.zeytinburnu.locked"
+      },
+      "buttons": {
+        "RT": {
+          "labelKey": "buttons.LT"
+        }
+      }
+    },
+    {
+      "id": "field-0304",
+      "address": "0304",
+      "tile": "TrackDiagonalDown"
+    },
+    {
+      "id": "field-0604",
+      "address": "0604",
+      "tile": "BorderTopBottomLeft"
+    },
+    {
+      "id": "field-0704",
+      "address": "0704",
+      "tile": "BorderTopBottom"
+    },
+    {
+      "id": "field-0804",
+      "address": "0804",
+      "tile": "BorderTopBottomWithInterlockingSymbol"
+    },
+    {
+      "id": "field-0904",
+      "address": "0904",
+      "tile": "BorderTopBottom"
+    },
+    {
+      "id": "field-1004",
+      "address": "1004",
+      "tile": "BorderHalfLeft"
+    },
+    {
+      "id": "field-1104",
+      "address": "1104",
+      "tile": "TrackCrossing"
+    },
+    {
+      "id": "continuous-operation-track-1",
+      "address": "0606",
+      "tile": "DIS-MIS",
+      "bindings": {
+        "mode.continuous": "display.continuous.track-1.active",
+        "mode.local": "display.continuous.track-1.local"
+      }
+    },
+    {
+      "id": "field-0706",
+      "address": "0706",
+      "tile": "Track"
+    },
+    {
+      "id": "field-0906",
+      "address": "0906",
+      "tile": "PointToTopRight",
+      "orientation": "mirror-y",
+      "labels": {
+        "label.name": "8"
+      },
+      "bindings": {
+        "point.straight": "display.point.8.straight",
+        "point.branch": "display.point.8.branch"
+      }
+    },
+    {
+      "id": "field-1006",
+      "address": "1006",
+      "tile": "Track"
+    },
+    {
+      "id": "field-0602",
+      "address": "0602",
+      "tile": "TrackFromBottomLeft",
+      "orientation": "mirror-y"
+    },
+    {
+      "id": "field-0702",
+      "address": "0702",
+      "tile": "PointToTopRight",
+      "orientation": "mirror-y",
+      "labels": {
+        "label.name": "3"
+      },
+      "bindings": {
+        "point.straight": "display.point.3.straight",
+        "point.branch": "display.point.3.branch"
+      }
+    },
+    {
+      "id": "field-0802",
+      "address": "0802",
+      "tile": "RouteTargetWithTopNameplateWithoutRouteLamp",
+      "labels": {
+        "label.name": "3"
+      },
+      "bindings": {
+        "track.1": "display.track.3",
+        "track.2": "display.track.3"
+      }
+    },
+    {
+      "id": "field-0902",
+      "address": "0902",
+      "tile": "FourAspectSignalToRight",
+      "labels": {
+        "label.name": "15.3"
+      },
+      "bindings": {
+        "signal.red": "display.signal.15.3.stop",
+        "signal.green": "display.signal.15.3.proceed",
+        "signal.triangle": "display.signal.15.3.substitute",
+        "signal.aux": "display.signal.15.3.shunt"
+      }
+    },
+    {
+      "id": "field-1002",
+      "address": "1002",
+      "tile": "PointToTopRight",
+      "labels": {
+        "label.name": "9"
+      },
+      "bindings": {
+        "point.straight": "display.point.9.straight",
+        "point.branch": "display.point.9.branch"
+      }
+    },
+    {
+      "id": "field-1102",
+      "address": "1102",
+      "tile": "DerailerLeftDown",
+      "labels": {
+        "label.name": "Gs II"
+      },
+      "bindings": {
+        "point.straight": "display.point.Gs II.straight",
+        "point.branch": "display.point.Gs II.branch"
+      }
+    },
+    {
+      "id": "field-1202",
+      "address": "1202",
+      "tile": "TrackWithBufferStop"
+    },
+    {
+      "id": "continuous-operation-track-2",
+      "address": "0601",
+      "tile": "DIS-MIS",
+      "bindings": {
+        "mode.continuous": "display.continuous.track-2.active",
+        "mode.local": "display.continuous.track-2.local"
+      }
+    },
+    {
+      "id": "field-0801",
+      "address": "0801",
+      "tile": "DiagonalDerailerLeft",
+      "labels": {
+        "label.name": "Gs I"
+      },
+      "bindings": {
+        "point.straight": "display.point.Gs I.straight",
+        "point.branch": "display.point.Gs I.branch"
+      }
+    },
+    {
+      "id": "field-0901",
+      "address": "0901",
+      "tile": "Track"
+    },
+    {
+      "id": "field-1001",
+      "address": "1001",
+      "tile": "TrackWithBufferStop"
+    },
+    {
+      "id": "point-7ab",
+      "address": "1005",
+      "tile": "SingleSlip",
+      "labels": {
+        "label.name1": "7-B",
+        "label.name2": "7-A"
+      },
+      "bindings": {
+        "point.1.straight": "display.point.7b.straight",
+        "point.1.branch": "display.point.7b.branch",
+        "point.2.straight": "display.point.7a.straight",
+        "point.2.branch": "display.point.7a.branch"
+      }
+    },
+    {
+      "id": "point-5cd",
+      "address": "0806",
+      "tile": "DoubleSlipLeftControl",
+      "labels": {
+        "label.name": "5-CD"
+      },
+      "bindings": {
+        "point.straight": "display.point.5cd.straight",
+        "point.branch": "display.point.5cd.branch"
+      }
+    }
+  ]
+}

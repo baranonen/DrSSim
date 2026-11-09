@@ -1,0 +1,201 @@
+{
+  "version": 1,
+  "graphId": "yedikule",
+  "approachAnnouncementCircuits": [
+    "2-0",
+    "1-2"
+  ],
+  "powerSupply": {
+    "backupSupportsPoints": false,
+    "backupFeedsRectifiers": true
+  },
+  "taktPeriodMs": 800,
+  "pointMovementMs": 4000,
+  "pointMotorTimeoutMs": 6000,
+  "routeHoldMs": 100,
+  "routeOperationMs": 500,
+  "controlHoldMs": 100,
+  "controlOperationMs": 500,
+  "continuousHoldMs": 100,
+  "continuousOperationMs": 300,
+  "substituteHoldMs": 100,
+  "dayNightHoldMs": 100,
+  "initialPointBranch": "B",
+  "pointTrackCircuits": {
+    "1": "W1",
+    "2": "W2",
+    "3": "W3",
+    "4": "W4",
+    "6": "W6",
+    "8": "W8",
+    "9": "W9",
+    "10": "W10",
+    "11": "W11",
+    "12": "W12",
+    "13": "W13",
+    "5-CD": "W5",
+    "7-A": "W7",
+    "7-B": "W7",
+    "Gs I": "Gs I",
+    "Gs II": "Gs II"
+  },
+  "routes": [
+    {
+      "id": "12/1",
+      "startSignalId": "12",
+      "target": {
+        "kind": "route-target",
+        "targetId": "1"
+      },
+      "points": {
+        "13": "B",
+        "10": "B",
+        "7-B": "B",
+        "12": "B",
+        "8": "B",
+        "7-A": "B",
+        "6": "B",
+        "5-CD": "B"
+      },
+      "trackCircuits": [
+        "W13",
+        "W7",
+        "1-1",
+        "W6"
+      ],
+      "stopSignals": [],
+      "kind": "entry"
+    },
+    {
+      "id": "10/Kumkapı",
+      "startSignalId": "10",
+      "target": {
+        "kind": "route-target",
+        "targetId": "kumkapi"
+      },
+      "points": {
+        "4": "B",
+        "1": "B"
+      },
+      "trackCircuits": [
+        "W4",
+        "1-0"
+      ],
+      "stopSignals": [],
+      "kind": "exit"
+    },
+    {
+      "id": "13/2",
+      "startSignalId": "13",
+      "target": {
+        "kind": "route-target",
+        "targetId": "2"
+      },
+      "points": {
+        "1": "B",
+        "4": "B",
+        "2": "B",
+        "Gs I": "B"
+      },
+      "trackCircuits": [
+        "W1",
+        "W2",
+        "2-1"
+      ],
+      "stopSignals": [],
+      "flankTrackCircuits": [
+        "W3"
+      ],
+      "kind": "entry"
+    },
+    {
+      "id": "13/3",
+      "startSignalId": "13",
+      "target": {
+        "kind": "route-target",
+        "targetId": "3"
+      },
+      "points": {
+        "1": "B",
+        "4": "B",
+        "2": "C",
+        "3": "B",
+        "Gs I": "B"
+      },
+      "trackCircuits": [
+        "W1",
+        "W2",
+        "W3",
+        "3"
+      ],
+      "stopSignals": [],
+      "kind": "entry"
+    },
+    {
+      "id": "15.1/Zeytinburnu",
+      "startSignalId": "15.1",
+      "target": {
+        "kind": "route-target",
+        "targetId": "zeytinburnu"
+      },
+      "points": {
+        "10": "B",
+        "13": "B",
+        "11": "B",
+        "9": "B",
+        "12": "B",
+        "7-A": "B"
+      },
+      "trackCircuits": [
+        "W10",
+        "W11",
+        "W12",
+        "2-2"
+      ],
+      "stopSignals": [],
+      "kind": "exit"
+    },
+    {
+      "id": "15.3/Zeytinburnu",
+      "startSignalId": "15.3",
+      "target": {
+        "kind": "route-target",
+        "targetId": "zeytinburnu"
+      },
+      "points": {
+        "9": "C",
+        "Gs II": "C",
+        "11": "C",
+        "12": "B",
+        "7-A": "B"
+      },
+      "trackCircuits": [
+        "W9",
+        "W11",
+        "W12",
+        "2-2"
+      ],
+      "stopSignals": [
+        "15.1"
+      ],
+      "flankTrackCircuits": [
+        "W10"
+      ],
+      "kind": "exit"
+    }
+  ],
+  "continuousOperations": [
+    {
+      "id": "track-1",
+      "targetId": "1",
+      "entryRouteId": "12/1",
+      "exitRouteId": "10/Kumkapı"
+    },
+    {
+      "id": "track-2",
+      "targetId": "2",
+      "entryRouteId": "13/2",
+      "exitRouteId": "15.1/Zeytinburnu"
+    }
+  ]
+}

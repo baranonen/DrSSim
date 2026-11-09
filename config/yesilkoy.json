@@ -1,0 +1,581 @@
+{
+  "version": 1,
+  "id": "yesilkoy",
+  "name": "Yeşilköy",
+  "columns": 13,
+  "rows": 7,
+  "fields": [
+    {
+      "id": "klappe-storage",
+      "address": "0107",
+      "tile": "Field",
+      "klappeStorage": true
+    },
+    {
+      "id": "mgd-sgd",
+      "address": "0207",
+      "tile": "MGD-SGD"
+    },
+    {
+      "id": "stgd",
+      "address": "0307",
+      "tile": "STGD"
+    },
+    {
+      "id": "ysgd",
+      "address": "0407",
+      "tile": "YSGD",
+      "buttons": {
+        "YSGD": {
+          "fixedKlappe": "hexagon"
+        }
+      },
+      "bindings": {
+        "counter.value": "display.operation.YSGD"
+      }
+    },
+    {
+      "id": "fault-indicators",
+      "address": "0507",
+      "tile": "SAM-MAM"
+    },
+    {
+      "id": "mains-indicators",
+      "address": "0607",
+      "tile": "SM"
+    },
+    {
+      "id": "battery-60",
+      "address": "0707",
+      "tile": "BATTERY-60"
+    },
+    {
+      "id": "battery-12",
+      "address": "0807",
+      "tile": "BATTERY-12"
+    },
+    {
+      "id": "sirkeci-route-target",
+      "address": "0105",
+      "tile": "RouteTargetWithTopNameplate",
+      "labels": {
+        "label.name": "Bakırköy"
+      },
+      "bindings": {
+        "track.1": "display.track.1-0",
+        "track.2": "display.track.1-0",
+        "route.locked": "display.target.sirkeci.locked"
+      },
+      "buttons": {
+        "RT": {
+          "labelKey": "buttons.LT"
+        }
+      }
+    },
+    {
+      "id": "sirkeci-track",
+      "address": "0205",
+      "tile": "TrackWithTrackCircuit",
+      "bindings": {
+        "track.1": "display.track.1-1",
+        "track.2": "display.track.1-1"
+      }
+    },
+    {
+      "id": "sirkeci-point",
+      "address": "0305",
+      "tile": "PointToTopRight",
+      "labels": {
+        "label.name": "5"
+      },
+      "bindings": {
+        "point.straight": "display.point.5.straight",
+        "point.branch": "display.point.5.branch"
+      }
+    },
+    {
+      "id": "signal-26.2",
+      "address": "0405",
+      "tile": "ThreeAspectSignalToLeft",
+      "labels": {
+        "label.name": "26.2"
+      },
+      "bindings": {
+        "signal.red": "display.signal.26.2.stop",
+        "signal.green": "display.signal.26.2.proceed",
+        "signal.triangle": "display.signal.26.2.substitute"
+      }
+    },
+    {
+      "id": "track-26.2-to-target-2",
+      "address": "0505",
+      "tile": "Track"
+    },
+    {
+      "id": "route-target-2",
+      "address": "0605",
+      "tile": "RouteTargetWithTopNameplateWithoutRouteLamp",
+      "labels": {
+        "label.name": "1"
+      },
+      "bindings": {
+        "track.1": "display.track.1-2",
+        "track.2": "display.track.1-2"
+      }
+    },
+    {
+      "id": "track-right-of-target-2-a",
+      "address": "0705",
+      "tile": "Track"
+    },
+    {
+      "id": "track-right-of-target-2-b",
+      "address": "0805",
+      "tile": "Track"
+    },
+    {
+      "id": "track-point-5-upper-to-signal",
+      "address": "0406",
+      "tile": "TrackFromBottomLeft"
+    },
+    {
+      "id": "upper-left-facing-signal",
+      "address": "0506",
+      "tile": "FourAspectSignalToLeft",
+      "labels": {
+        "label.name": "26.4"
+      },
+      "bindings": {
+        "signal.red": "display.signal.26.4.stop",
+        "signal.green": "display.signal.26.4.proceed",
+        "signal.triangle": "display.signal.26.4.substitute",
+        "signal.aux": "display.signal.26.4.shunt"
+      }
+    },
+    {
+      "id": "route-target-4",
+      "address": "0606",
+      "tile": "RouteTargetWithTopNameplateWithoutRouteLamp",
+      "labels": {
+        "label.name": "4"
+      },
+      "bindings": {
+        "track.1": "display.track.4",
+        "track.2": "display.track.4"
+      }
+    },
+    {
+      "id": "track-right-of-target-4",
+      "address": "0706",
+      "tile": "Track"
+    },
+    {
+      "id": "track-4-to-point-8-diagonal",
+      "address": "0806",
+      "tile": "TrackFromBottomLeft",
+      "orientation": "mirror-x"
+    },
+    {
+      "id": "point-8",
+      "address": "0905",
+      "tile": "PointToTopRight",
+      "orientation": "mirror-x",
+      "labels": {
+        "label.name": "8"
+      },
+      "bindings": {
+        "point.straight": "display.point.8.straight",
+        "point.branch": "display.point.8.branch"
+      }
+    },
+    {
+      "id": "point-11",
+      "address": "1005",
+      "tile": "PointToTopRight",
+      "labels": {
+        "label.name": "11"
+      },
+      "orientation": "mirror-y",
+      "bindings": {
+        "point.straight": "display.point.11.straight",
+        "point.branch": "display.point.11.branch"
+      }
+    },
+    {
+      "id": "track-point-11-to-point-12",
+      "address": "1105",
+      "tile": "Track"
+    },
+    {
+      "id": "point-12",
+      "address": "1205",
+      "tile": "PointToTopRight",
+      "orientation": "rotate-180",
+      "labels": {
+        "label.name": "12"
+      },
+      "bindings": {
+        "point.straight": "display.point.12.straight",
+        "point.branch": "display.point.12.branch"
+      }
+    },
+    {
+      "id": "signal-28",
+      "address": "1305",
+      "tile": "ThreeAspectSignalToLeftWithRouteLamp",
+      "labels": {
+        "label.name": "28"
+      },
+      "bindings": {
+        "signal.red": "display.signal.28.stop",
+        "signal.green": "display.signal.28.proceed",
+        "signal.triangle": "display.signal.28.substitute",
+        "signal.route": "display.signal.28.route.locked",
+        "track.1": "display.track.1-3",
+        "track.2": "display.track.1-3"
+      }
+    },
+    {
+      "id": "crossing-points-10-11-12-13",
+      "address": "1104",
+      "tile": "TrackCrossing"
+    },
+    {
+      "id": "point-10",
+      "address": "1003",
+      "tile": "PointToTopRight",
+      "labels": {
+        "label.name": "10"
+      },
+      "bindings": {
+        "point.straight": "display.point.10.straight",
+        "point.branch": "display.point.10.branch"
+      }
+    },
+    {
+      "id": "track-point-10-to-point-13",
+      "address": "1103",
+      "tile": "Track"
+    },
+    {
+      "id": "point-13",
+      "address": "1203",
+      "tile": "PointToTopRightWithAdjacentTrackCircuit",
+      "orientation": "mirror-x",
+      "labels": {
+        "label.name": "13"
+      },
+      "bindings": {
+        "point.straight": "display.point.13.straight",
+        "point.branch": "display.point.13.branch",
+        "track.adjacent": "display.track.2-2"
+      }
+    },
+    {
+      "id": "signal-25",
+      "address": "0103",
+      "tile": "ThreeAspectSignalToRightWithRouteLamp",
+      "labels": {
+        "label.name": "25"
+      },
+      "bindings": {
+        "signal.red": "display.signal.25.stop",
+        "signal.green": "display.signal.25.proceed",
+        "signal.triangle": "display.signal.25.substitute",
+        "signal.route": "display.signal.25.route.locked",
+        "track.1": "display.track.2-0",
+        "track.2": "display.track.2-0"
+      }
+    },
+    {
+      "id": "point-1",
+      "address": "0203",
+      "tile": "PointToTopRight",
+      "orientation": "mirror-y",
+      "labels": {
+        "label.name": "1"
+      },
+      "bindings": {
+        "point.straight": "display.point.1.straight",
+        "point.branch": "display.point.1.branch"
+      }
+    },
+    {
+      "id": "track-right-of-point-1-a",
+      "address": "0303",
+      "tile": "Track"
+    },
+    {
+      "id": "track-right-of-point-1-b",
+      "address": "0403",
+      "tile": "Track"
+    },
+    {
+      "id": "track-right-of-point-1-c",
+      "address": "0503",
+      "tile": "Track"
+    },
+    {
+      "id": "point-2",
+      "address": "0302",
+      "tile": "PointFromTopLeftToBottomRight",
+      "labels": {
+        "label.name": "2"
+      },
+      "bindings": {
+        "point.straight": "display.point.2.straight",
+        "point.branch": "display.point.2.branch"
+      }
+    },
+    {
+      "id": "track-left-of-point-3",
+      "address": "0301",
+      "tile": "Track"
+    },
+    {
+      "id": "point-3",
+      "address": "0401",
+      "tile": "PointToTopRight",
+      "orientation": "mirror-x",
+      "labels": {
+        "label.name": "3"
+      },
+      "bindings": {
+        "point.straight": "display.point.3.straight",
+        "point.branch": "display.point.3.branch"
+      }
+    },
+    {
+      "id": "track-right-of-point-2-a",
+      "address": "0402",
+      "tile": "Track"
+    },
+    {
+      "id": "track-right-of-point-2-b",
+      "address": "0502",
+      "tile": "Track"
+    },
+    {
+      "id": "track-right-of-point-3",
+      "address": "0501",
+      "tile": "Track"
+    },
+    {
+      "id": "route-target-1",
+      "address": "0603",
+      "tile": "RouteTargetWithTopNameplateWithoutRouteLamp",
+      "labels": {
+        "label.name": "2"
+      },
+      "bindings": {
+        "track.1": "display.track.2-1",
+        "track.2": "display.track.2-1"
+      }
+    },
+    {
+      "id": "route-target-3",
+      "address": "0602",
+      "tile": "RouteTargetWithTopNameplateWithoutRouteLamp",
+      "labels": {
+        "label.name": "3"
+      },
+      "bindings": {
+        "track.1": "display.track.3",
+        "track.2": "display.track.3"
+      }
+    },
+    {
+      "id": "track-right-of-target-1",
+      "address": "0703",
+      "tile": "Track"
+    },
+    {
+      "id": "point-6",
+      "address": "0702",
+      "tile": "PointToTopRight",
+      "orientation": "rotate-180",
+      "labels": {
+        "label.name": "7"
+      },
+      "bindings": {
+        "point.straight": "display.point.7.straight",
+        "point.branch": "display.point.7.branch"
+      }
+    },
+    {
+      "id": "signal-27.1",
+      "address": "0803",
+      "tile": "FourAspectSignalToRight",
+      "labels": {
+        "label.name": "27.1"
+      },
+      "bindings": {
+        "signal.red": "display.signal.27.1.stop",
+        "signal.green": "display.signal.27.1.proceed",
+        "signal.triangle": "display.signal.27.1.substitute",
+        "signal.aux": "display.signal.27.1.shunt"
+      }
+    },
+    {
+      "id": "signal-27.3",
+      "address": "0802",
+      "tile": "FourAspectSignalToTopRight",
+      "labels": {
+        "label.name": "27.3"
+      },
+      "bindings": {
+        "signal.red": "display.signal.27.3.stop",
+        "signal.green": "display.signal.27.3.proceed",
+        "signal.triangle": "display.signal.27.3.substitute",
+        "signal.aux": "display.signal.27.3.shunt"
+      }
+    },
+    {
+      "id": "point-4",
+      "address": "0601",
+      "tile": "Derailer",
+      "labels": {
+        "label.name": "Gs I"
+      },
+      "bindings": {
+        "point.straight": "display.point.4.straight",
+        "point.branch": "display.point.4.branch"
+      }
+    },
+    {
+      "id": "point-6-secondary",
+      "address": "0903",
+      "tile": "PointToTopRight",
+      "orientation": "rotate-180",
+      "labels": {
+        "label.name": "6"
+      },
+      "bindings": {
+        "point.straight": "display.point.6.straight",
+        "point.branch": "display.point.6.branch"
+      }
+    },
+    {
+      "id": "halkali-route-target",
+      "address": "1303",
+      "tile": "RouteTargetWithBottomNameplate",
+      "labels": {
+        "label.name": "Florya"
+      },
+      "bindings": {
+        "track.1": "display.track.2-3",
+        "track.2": "display.track.2-3",
+        "route.locked": "display.target.halkali.locked"
+      },
+      "buttons": {
+        "RT": {
+          "labelKey": "buttons.LT"
+        }
+      }
+    },
+    {
+      "id": "shunting-signal-1",
+      "address": "1204",
+      "tile": "ShuntingSignalToLeft",
+      "labels": {
+        "label.name": "Ls 1"
+      },
+      "bindings": {
+        "signal.red": "display.signal.1.stop",
+        "signal.shunt": "display.signal.1.shunt"
+      }
+    },
+    {
+      "id": "syiyd",
+      "address": "0907",
+      "tile": "SYIYD",
+      "buttons": {
+        "SYIYD": {
+          "fixedKlappe": "hexagon"
+        }
+      },
+      "bindings": {
+        "counter.value": "display.operation.SYIYD"
+      }
+    },
+    {
+      "id": "myd",
+      "address": "1007",
+      "tile": "MYD",
+      "buttons": {
+        "MYD": {
+          "fixedKlappe": "hexagon"
+        }
+      },
+      "bindings": {
+        "counter.value": "display.operation.MYD"
+      }
+    },
+    {
+      "id": "outlined-area-left",
+      "address": "0404",
+      "tile": "BorderTopBottomLeft"
+    },
+    {
+      "id": "outlined-area-middle-1",
+      "address": "0504",
+      "tile": "BorderTopBottom"
+    },
+    {
+      "id": "outlined-area-middle-2",
+      "address": "0604",
+      "tile": "BorderTopBottomWithInterlockingSymbol"
+    },
+    {
+      "id": "outlined-area-middle-3",
+      "address": "0704",
+      "tile": "BorderTopBottom"
+    },
+    {
+      "id": "outlined-area-right",
+      "address": "0804",
+      "tile": "BorderTopBottomRight"
+    },
+    {
+      "id": "tcs",
+      "address": "1107",
+      "tile": "TCS",
+      "bindings": {
+        "counter.value": "display.operation.TCS"
+      }
+    },
+    {
+      "id": "day-night",
+      "address": "1207",
+      "tile": "GE-GU"
+    },
+    {
+      "id": "continuous-operation-upper",
+      "address": "0906",
+      "tile": "DIS-MIS",
+      "bindings": {
+        "mode.continuous": "display.continuous.upper.active",
+        "mode.local": "display.continuous.upper.local"
+      }
+    },
+    {
+      "id": "continuous-operation-lower",
+      "address": "0902",
+      "tile": "DIS-MIS",
+      "bindings": {
+        "mode.continuous": "display.continuous.lower.active",
+        "mode.local": "display.continuous.lower.local"
+      }
+    },
+    {
+      "id": "desk-key-switch",
+      "address": "1307",
+      "tile": "Field"
+    },
+    {
+      "id": "desk-key-switch-lower",
+      "address": "1306",
+      "tile": "Field"
+    }
+  ]
+}

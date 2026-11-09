@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect width="100" height="100" fill="#b5b8b1"/>
+  <g transform="translate(0 20)">
+    <line x1="11" y1="42.95454545454545" x2="22.545454545454547" y2="54.5" stroke="#000" stroke-width="1" stroke-linecap="butt" transform="translate(50 30) scale(0.75) translate(-50 -30)"/>
+    <line x1="89" y1="42.95454545454545" x2="77.45454545454545" y2="54.5" stroke="#000" stroke-width="1" stroke-linecap="butt" transform="translate(50 30) scale(0.75) translate(-50 -30)"/>
+    <line x1="11" y1="31.40909090909091" x2="34.09090909090909" y2="54.5" stroke="#000" stroke-width="1" stroke-linecap="butt" transform="translate(50 30) scale(0.75) translate(-50 -30)"/>
+    <line x1="89" y1="31.40909090909091" x2="65.9090909090909" y2="54.5" stroke="#000" stroke-width="1" stroke-linecap="butt" transform="translate(50 30) scale(0.75) translate(-50 -30)"/>
+    <line x1="11" y1="19.863636363636367" x2="45.63636363636363" y2="54.5" stroke="#000" stroke-width="1" stroke-linecap="butt" transform="translate(50 30) scale(0.75) translate(-50 -30)"/>
+    <line x1="89" y1="19.863636363636367" x2="54.36363636363637" y2="54.5" stroke="#000" stroke-width="1" stroke-linecap="butt" transform="translate(50 30) scale(0.75) translate(-50 -30)"/>
+    <line x1="11" y1="8.31818181818182" x2="57.18181818181818" y2="54.5" stroke="#000" stroke-width="1" stroke-linecap="butt" transform="translate(50 30) scale(0.75) translate(-50 -30)"/>
+    <line x1="89" y1="8.31818181818182" x2="42.81818181818182" y2="54.5" stroke="#000" stroke-width="1" stroke-linecap="butt" transform="translate(50 30) scale(0.75) translate(-50 -30)"/>
+    <line x1="19.727272727272727" y1="5.5" x2="68.72727272727272" y2="54.5" stroke="#000" stroke-width="1" stroke-linecap="butt" transform="translate(50 30) scale(0.75) translate(-50 -30)"/>
+    <line x1="80.27272727272728" y1="5.5" x2="31.27272727272728" y2="54.5" stroke="#000" stroke-width="1" stroke-linecap="butt" transform="translate(50 30) scale(0.75) translate(-50 -30)"/>
+    <line x1="31.272727272727266" y1="5.5" x2="80.27272727272727" y2="54.5" stroke="#000" stroke-width="1" stroke-linecap="butt" transform="translate(50 30) scale(0.75) translate(-50 -30)"/>
+    <line x1="68.72727272727273" y1="5.5" x2="19.727272727272734" y2="54.5" stroke="#000" stroke-width="1" stroke-linecap="butt" transform="translate(50 30) scale(0.75) translate(-50 -30)"/>
+    <line x1="42.81818181818181" y1="5.5" x2="89" y2="51.68181818181819" stroke="#000" stroke-width="1" stroke-linecap="butt" transform="translate(50 30) scale(0.75) translate(-50 -30)"/>
+    <line x1="57.18181818181819" y1="5.5" x2="11" y2="51.68181818181819" stroke="#000" stroke-width="1" stroke-linecap="butt" transform="translate(50 30) scale(0.75) translate(-50 -30)"/>
+    <line x1="54.36363636363636" y1="5.5" x2="89" y2="40.13636363636364" stroke="#000" stroke-width="1" stroke-linecap="butt" transform="translate(50 30) scale(0.75) translate(-50 -30)"/>
+    <line x1="45.63636363636364" y1="5.5" x2="11" y2="40.13636363636364" stroke="#000" stroke-width="1" stroke-linecap="butt" transform="translate(50 30) scale(0.75) translate(-50 -30)"/>
+    <line x1="65.9090909090909" y1="5.5" x2="89" y2="28.590909090909093" stroke="#000" stroke-width="1" stroke-linecap="butt" transform="translate(50 30) scale(0.75) translate(-50 -30)"/>
+    <line x1="34.09090909090909" y1="5.5" x2="11" y2="28.590909090909093" stroke="#000" stroke-width="1" stroke-linecap="butt" transform="translate(50 30) scale(0.75) translate(-50 -30)"/>
+    <line x1="77.45454545454545" y1="5.5" x2="89" y2="17.045454545454547" stroke="#000" stroke-width="1" stroke-linecap="butt" transform="translate(50 30) scale(0.75) translate(-50 -30)"/>
+    <line x1="22.545454545454547" y1="5.5" x2="11" y2="17.045454545454547" stroke="#000" stroke-width="1" stroke-linecap="butt" transform="translate(50 30) scale(0.75) translate(-50 -30)"/>
+    <rect x="11" y="5.5" width="78" height="49" fill="none" stroke="#000" stroke-width="2" transform="translate(50 30) scale(0.75) translate(-50 -30)"/>
+    <rect x="18.5" y="13.5" width="63" height="10" fill="#000" transform="translate(50 30) scale(0.75) translate(-50 -30)"/>
+    <circle cx="50" cy="41.2" r="7.2" fill="#000" transform="translate(50 30) scale(0.75) translate(-50 -30)"/>
+  </g>
+</svg>
