@@ -1,4 +1,4 @@
-import { createMenuBar, bindSubmenuHover, createMenuItem } from './menu-bar.js';
+import { createMenuBar, bindSubmenuHover, createMenuItem, positionSubmenu } from './menu-bar.js';
 
 /** Send fault selections to the interlocking model instead of modifying visual state directly. */
 export function bindFailuresUI({ interlocking: engine, i18n, menuBar = createMenuBar(), document = globalThis.document }) {
@@ -18,11 +18,12 @@ export function bindFailuresUI({ interlocking: engine, i18n, menuBar = createMen
   }
   function place(panel, anchor, below = false) {
     panel.hidden = false;
+    if (!below) { positionSubmenu(panel, anchor); return; }
     const box = anchor.getBoundingClientRect(), width = panel.offsetWidth, height = panel.offsetHeight;
     const maxX = document.documentElement.clientWidth - width - 8, maxY = document.documentElement.clientHeight - height - 8;
-    const left = below ? box.left : box.right + width + 6 <= document.documentElement.clientWidth - 8 ? box.right + 6 : box.left - width - 6;
+    const left = box.left;
     panel.style.left = `${Math.max(8, Math.min(left, maxX))}px`;
-    panel.style.top = `${Math.max(8, Math.min(below ? box.bottom + 7 : box.top, maxY))}px`;
+    panel.style.top = `${Math.max(8, Math.min(box.bottom + 7, maxY))}px`;
   }
   function row(panel, title, callback, { submenu = false, checked } = {}) {
     const {button,mark} = createMenuItem(document,title,{checked:checked ? checked() : undefined});

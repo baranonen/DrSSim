@@ -2,7 +2,7 @@ export default Object.freeze({
   "launch.description": "Simulation der alten DrS-Stellwerke auf der Strecke Sirkeci–Halkalı in Istanbul",
   "launch.interlocking": "Stellwerk",
   "launch.loadError": "Das Stellwerk konnte nicht geladen werden. Versuchen Sie es erneut oder wählen Sie ein anderes Stellwerk.",
-  "launch.about": "Über",
+  "launch.about": "Über DrSSim",
   "launch.start": "Simulation starten",
 
   "help.title": "Hilfe",

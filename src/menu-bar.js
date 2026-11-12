@@ -46,3 +46,21 @@ export function createMenuItem(document, title, { checked, submenu = false } = {
   if (submenu) { button.className = 'submenu-trigger'; button.setAttribute('aria-expanded','false'); }
   return { button, mark, label };
 }
+
+/** Align the first submenu row with its trigger and overlap the parent card slightly. */
+export function positionSubmenu(panel, anchor, parent = anchor?.parentElement) {
+  if (!anchor || panel.hidden) return;
+  const document = panel.ownerDocument;
+  const box = anchor.getBoundingClientRect();
+  const parentBox = (parent ?? anchor).getBoundingClientRect();
+  const width = panel.offsetWidth, height = panel.offsetHeight;
+  const first = panel.querySelector('button');
+  const inset = first ? first.getBoundingClientRect().top - panel.getBoundingClientRect().top : 0;
+  const overlap = 3, margin = 8;
+  const maxX = document.documentElement.clientWidth - width - margin;
+  const maxY = document.documentElement.clientHeight - height - margin;
+  const right = parentBox.right - overlap;
+  const left = right <= maxX ? right : parentBox.left - width + overlap;
+  panel.style.left = `${Math.max(margin, Math.min(left, maxX))}px`;
+  panel.style.top = `${Math.max(margin, Math.min(box.top - inset, maxY))}px`;
+}

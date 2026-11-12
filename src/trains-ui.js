@@ -1,4 +1,4 @@
-import { createMenuBar, bindSubmenuHover } from './menu-bar.js';
+import { createMenuBar, bindSubmenuHover, positionSubmenu } from './menu-bar.js';
 
 /** Fixed simulation UI layer, independent of the desk control system. */
 export function bindTrainsUI({ trains, graph, modelBindings, interlocking, i18n, menuBar = createMenuBar(), confirmTrain = () => {}, document = globalThis.document }) {
@@ -17,13 +17,6 @@ export function bindTrainsUI({ trains, graph, modelBindings, interlocking, i18n,
     toggle.setAttribute('aria-expanded', 'false'); add.setAttribute('aria-expanded', 'false');
   }
   const closeMenu = () => rootMenu.close();
-  function place(panel, anchor) {
-    if (!anchor || panel.hidden) return;
-    const box = anchor.getBoundingClientRect(), w = panel.offsetWidth, h = panel.offsetHeight;
-    const left = box.right + w + 6 <= document.documentElement.clientWidth - 8 ? box.right + 6 : box.left - w - 6;
-    panel.style.left = `${Math.max(8, Math.min(left, document.documentElement.clientWidth - w - 8))}px`;
-    panel.style.top = `${Math.max(8, Math.min(box.top, document.documentElement.clientHeight - h - 8))}px`;
-  }
   function positionDropdown() {
     if (!open) return;
     const box = toggle.getBoundingClientRect();
@@ -33,11 +26,11 @@ export function bindTrainsUI({ trains, graph, modelBindings, interlocking, i18n,
   }
   function positionOptions() {
     const anchor = [...list.querySelectorAll('[data-train-id]')].find(row => row.dataset.trainId === selected);
-    place(options, anchor);
+    positionSubmenu(options, anchor, dropdown);
   }
   function positionLocations() {
     if (!open || !selecting) return;
-    place(locations,add);
+    positionSubmenu(locations, add, dropdown);
   }
   function render(force = false) {
     if (!open) return;

@@ -1,4 +1,4 @@
-import { createMenuBar, bindSubmenuHover, createMenuItem } from './menu-bar.js';
+import { createMenuBar, bindSubmenuHover, createMenuItem, positionSubmenu } from './menu-bar.js';
 import { LANGUAGE_OPTIONS } from './i18n.js';
 
 export function bindSimulationUI({ simulation, i18n, menuBar = createMenuBar(), onIntroduction = () => {}, onResetCounters = () => {}, onReturnHome = () => {}, document = globalThis.document }) {
@@ -9,10 +9,7 @@ export function bindSimulationUI({ simulation, i18n, menuBar = createMenuBar(), 
   function hideLanguages() { languages.hidden = true; languageButton?.setAttribute('aria-expanded','false'); }
   function placeLanguages() {
     if (languages.hidden || panel.hidden) return;
-    const box = languageButton.getBoundingClientRect(), width = languages.offsetWidth;
-    const left = box.right + width + 6 <= document.documentElement.clientWidth - 8 ? box.right + 6 : box.left - width - 6;
-    languages.style.left = `${Math.max(8,Math.min(left,document.documentElement.clientWidth-width-8))}px`;
-    languages.style.top = `${Math.max(8,Math.min(box.top,document.documentElement.clientHeight-languages.offsetHeight-8))}px`;
+    positionSubmenu(languages, languageButton, panel);
   }
   function showLanguages() {
     if (panel.hidden) return;
