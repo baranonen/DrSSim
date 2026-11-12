@@ -2,6 +2,7 @@ export default Object.freeze({
   "launch.description": "Simulation of the old DrS interlockings on the Sirkeci–Halkalı line in Istanbul",
   "launch.interlocking": "Interlocking",
   "launch.loadError": "The interlocking could not load. Try again or choose another interlocking.",
+  "launch.about": "About",
   "launch.start": "Start Simulation",
 
   "help.title": "Help",

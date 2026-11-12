@@ -2,6 +2,7 @@ export default Object.freeze({
   "launch.description": "Sirkeci–Halkalı hattındaki eski DrS anklaşmanlarının simülasyonu",
   "launch.interlocking": "Anklaşman",
   "launch.loadError": "Anklaşman yüklenemedi. Tekrar deneyin veya başka bir anklaşman seçin.",
+  "launch.about": "Hakkında",
   "launch.start": "Simülasyonu Başlat",
 
   "help.title": "Yardım",

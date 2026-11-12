@@ -1,4 +1,5 @@
 import { STATIONS } from './station-catalog.js';
+import { createOverlays } from './overlays.js';
 import { loadTisch } from './tisch.js';
 import { ButtonController } from './buttons.js';
 import { KlappeController } from './klappes.js';
@@ -52,6 +53,8 @@ function showStationSelection(failedStationId) {
   i18n.subscribe(renderLocale);
   bindLocalePreference(i18n);
   bindLaunchLanguageMenu(selection, i18n);
+  const overlays = createOverlays({ i18n });
+  selection.querySelector('#launch-about').addEventListener('click', overlays.about);
 
   const form = selection.querySelector('#launch-form');
   const list = form.querySelector('.station-selection-list');

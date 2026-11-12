@@ -32,6 +32,10 @@ export function createOverlays({ i18n, document = globalThis.document }) {
   header.append(title,close);
   const body = document.createElement('p'); body.className = 'modal-body';
   const credit = document.createElement('p'); credit.className = 'modal-credit'; credit.textContent = 'Baran Önen, 2026';
+  const email = document.createElement('a');
+  email.href = 'mailto:baran@baranonen.com';
+  email.textContent = 'baran@baranonen.com';
+  credit.append(document.createElement('br'), email);
   const footer = document.createElement('div'); footer.className = 'modal-actions';
   const no = document.createElement('button'); no.type='button'; no.className='modal-no';
   const yes = document.createElement('button'); yes.type='button'; yes.className='modal-yes';

@@ -11,7 +11,7 @@
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="manifest" href="manifest.webmanifest">
   <title>DrSSim</title>
-  <link rel="stylesheet" href="styles.css?v=launch-9">
+  <link rel="stylesheet" href="styles.css?v=launch-14">
   <!-- Use one module cache version after the SVG migration. -->
   <script type="importmap">{"imports":{"./src/tisch.js":"./src/tisch.js?v=svg-1","./src/tiles.js":"./src/tiles.js?v=svg-1","./src/viewport.js":"./src/viewport.js?v=svg-1","./src/locales/tr.js":"./src/locales/tr.js?v=svg-1","./src/locales/en.js":"./src/locales/en.js?v=svg-1"}}</script>
 </head>
@@ -33,6 +33,13 @@
       </fieldset>
       <button class="launch-submit" type="submit" data-i18n="launch.start">Start Simulation</button>
     </form>
+    <footer class="station-selection-footer">
+      <hr class="station-selection-rule">
+      <nav class="launch-footer-links">
+        <button id="launch-about" type="button" data-i18n="launch.about">About</button>
+        <a href="https://github.com/baranonen/DrSSim" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </nav>
+    </footer>
   </main>
   <div id="viewport" hidden><div id="desk" class="desk" data-tisch="./config/yesilkoy.json" data-graph="./config/graphs/yesilkoy.json" data-model-bindings="./config/model-bindings/yesilkoy.json" data-interlocking="./config/interlocking/yesilkoy.json" role="group" aria-label="Control desk"></div></div>
   <div id="simulation-ui" hidden><div id="trains-menu"><button id="simulation-toggle" class="menu-bar-pill" type="button" data-i18n="simulation.title" aria-expanded="false" aria-haspopup="menu" aria-controls="simulation-dropdown">Simulation</button><button id="trains-toggle" type="button" data-i18n="trains.title" aria-expanded="false">Trains</button><button id="failures-toggle" type="button" data-i18n="failures.title" aria-expanded="false">Failures</button><button id="help-toggle" type="button" data-i18n="help.title" aria-expanded="false" aria-haspopup="menu">Help</button><button id="reset-view" type="button" data-i18n="view.reset" hidden>Reset view</button><div id="trains-dropdown" hidden><div id="trains-list"></div><button id="train-add" type="button" data-i18n="trains.add" aria-expanded="false" aria-controls="train-locations">Add train at signal</button></div></div><div id="help-dropdown" class="failures-panel" role="menu" hidden></div><div id="simulation-dropdown" class="failures-panel" role="menu" hidden></div><div id="simulation-languages" class="failures-panel" role="menu" hidden></div><div id="failures-dropdown" class="failures-panel" role="menu" hidden></div><div id="failure-items" class="failures-panel" role="menu" hidden></div><div id="failure-options" class="failures-panel" role="menu" hidden></div><div id="train-locations" hidden></div><div id="train-options" hidden></div><div id="hold-tip" class="help-tooltip" role="status" aria-live="polite" aria-atomic="true" hidden><span id="hold-tip-label"></span><span id="hold-tip-message"></span></div></div>
