@@ -67,6 +67,20 @@ export function compileInterlockingConfig(config, { graph, modelBindings }) {
   requireValue(['B', 'C'].includes(data.initialPointBranch) && object(data.pointTrackCircuits) && Array.isArray(data.routes), 'Initial point positions, circuits and routes are required.');
   requireValue(Object.keys(data.pointTrackCircuits).length === graph.nodes.length, 'Every point requires a track circuit.');
   for (const [id, circuit] of Object.entries(data.pointTrackCircuits)) { graph.getNode(id); graph.getTrackCircuit(circuit); }
+  data.pointDependencies ??= {};
+  requireValue(object(data.pointDependencies), 'Point dependencies must be indexed by point ID.');
+  for (const [id, branches] of Object.entries(data.pointDependencies)) {
+    graph.getNode(id);
+    requireValue(object(branches) && Object.keys(branches).length > 0, `Point dependency branches are required: ${id}`);
+    for (const [branch, requirements] of Object.entries(branches)) {
+      requireValue(['B', 'C'].includes(branch) && object(requirements) && Object.keys(requirements).length > 0,
+        `Point dependency requires a B/C target and point positions: ${id}`);
+      for (const [requiredId, requiredBranch] of Object.entries(requirements)) {
+        graph.getNode(requiredId);
+        requireValue(requiredId !== id && ['B', 'C'].includes(requiredBranch), `Invalid dependent point position: ${id}/${requiredId}`);
+      }
+    }
+  }
   if (data.shuntConditions === undefined) data.shuntConditions = {};
   requireValue(object(data.shuntConditions), 'Shunting conditions must be indexed by signal ID.');
   for (const [signalId, conditions] of Object.entries(data.shuntConditions)) {

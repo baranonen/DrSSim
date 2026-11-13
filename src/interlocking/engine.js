@@ -183,7 +183,8 @@ export class Interlocking {
     let valid, perform;
     if (command === 'MGD' || command === 'MYD') {
       const point = find(this.points, id, 'Point'), target = point.target;
-      valid = () => point.target === target && !point.locks.size && (command === 'MYD' || this.#clear(point.trackCircuitId));
+      valid = () => point.target === target && !point.locks.size && (command === 'MYD' || this.#clear(point.trackCircuitId))
+        && this.#pointDependenciesReady(id, target === 'B' ? 'C' : 'B');
       perform = () => this.togglePoint(id, { overrideOccupancy: command === 'MYD' });
     } else if (command === 'STGD') {
       find(this.signals, id, 'Signal');
@@ -234,9 +235,14 @@ export class Interlocking {
   togglePoint(id, { overrideOccupancy = false } = {}) {
     this.advanceTo();
     const point = find(this.points, id, 'Point');
+    if (!this.#pointDependenciesReady(id, point.target === 'B' ? 'C' : 'B')) return false;
     const accepted = point.toggle(this.timeMs, !this.#clear(point.trackCircuitId), overrideOccupancy, this.getPowerSupply().pointsPowerAvailable);
     if (accepted) this.#publish();
     return accepted;
+  }
+  #pointDependenciesReady(id, target) {
+    // Auxiliary occupancy override never bypasses the dependent end-position checks.
+    return this.#pointsReady(this.config.pointDependencies?.[id]?.[target] ?? {});
   }
   #pointsReady(points) {
     return Object.entries(points).every(([id, branch]) => {
